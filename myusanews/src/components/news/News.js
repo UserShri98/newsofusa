@@ -11,9 +11,9 @@ const News = () => {
 
   const fetchData = async (query) => {
     setLoading(true);
-    let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=696a92ae5a554a1d8c69381618b87c68`;
+    let url = `https://gnews.io/api/v4/top-headlines?category=general&apikey=27546ea6f2c88af074a2077cae1231a0`;
     if (query) {
-      url = `https://newsapi.org/v2/everything?q=${query}&apiKey=696a92ae5a554a1d8c69381618b87c68`;
+      url = `https://gnews.io/api/v4/search?q=${query}&apikey=27546ea6f2c88af074a2077cae1231a0`;
     }
     try {
       let res = await fetch(url);
@@ -48,15 +48,15 @@ const News = () => {
       <div key={index} className="card">
         <img
           src={
-            ele.urlToImage === null
+            ele.image === null
               ? 'https://via.placeholder.com/150'
-              : ele.urlToImage
+              : ele.image
           }
           className="card-img-top"
           alt="..."
         />
         <div className="card-body">
-          <h5 className="card-title">{ele.author}</h5>
+          <h5 className="card-title">{ele.source.name}</h5>
           <p className="card-text">{ele.title}</p>
           <a href={ele.url} target="_blank" className="btn btn-primary" rel="noopener noreferrer">
             Read more...
