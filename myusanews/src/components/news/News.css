@@ -1,132 +1,139 @@
-/* Styling for the main news container */
-.mainDiv {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
-    background-color: #f0f2f5;
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
   }
   
-  /* Styling for individual news cards */
-  .card {
-    width: 300px;
-    height: auto;
-    margin: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background-color: #fff;
-    transition: transform 0.2s;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card-img-top {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .card-body {
-    padding: 1rem;
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .card-text {
-    font-size: 1rem;
-    color: #555;
-    margin: 0.5rem 0;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border: none;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Styling for the search bar */
   .search-bar {
-    width: 100%;
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
-  }
-  
-  .search-bar form {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    margin: 20px 0;
   }
   
   .search-bar input {
-    width: 300px;
-    padding: 0.5rem;
+    padding: 10px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    outline: none;
+    margin-right: 10px;
   }
   
   .search-bar button {
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
+    font-size: 16px;
     background-color: #007bff;
+    color: white;
     border: none;
     border-radius: 4px;
-    color: #fff;
     cursor: pointer;
-    transition: background-color 0.2s;
   }
   
   .search-bar button:hover {
     background-color: #0056b3;
   }
   
-  /* Styling for the loader */
-  .loader {
-    font-size: 1.5rem;
-    color: #007bff;
+  .mainDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
   
-  /* Styling for the pagination */
+  .card {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .loader {
+    font-size: 24px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
   .pagination {
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 20px 0;
   }
   
   .pagination button {
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 10px 15px;
+    margin: 0 5px;
     border: 1px solid #007bff;
-    background-color: #fff;
+    background-color: white;
     color: #007bff;
-    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
-  }
-  
-  .pagination button:hover {
-    background-color: #007bff;
-    color: #fff;
   }
   
   .pagination button.active {
     background-color: #007bff;
-    color: #fff;
+    color: white;
+  }
+  
+  .pagination button:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+      max-width: none;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .search-bar {
+      flex-direction: column;
+    }
+  
+    .search-bar input {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
   
